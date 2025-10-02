@@ -45,7 +45,7 @@ prec_lr = precision_score(y_test, predictions_lr, average='micro')
 recall_lr = recall_score(y_test, predictions_lr, average='micro')
 
 # Accuracy
-rain_acc_lr = logreg.score(X_train, y_train) * 100
+train_acc_lr = logreg.score(X_train, y_train) * 100
 test_acc_lr = logreg.score(X_test, y_test) * 100
 
 # Random Forest
@@ -135,4 +135,5 @@ with open('scores.txt', "w") as score:
     score.write("F1 Score: %2.1f%%\n" % f1_lr)
     score.write("Recall Score: %2.1f%%\n" % recall_lr)
     score.write("Precision Score: %2.1f%%\n" % prec_lr)
+
 
